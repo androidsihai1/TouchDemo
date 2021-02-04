@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--错误方式-->
+    <RelativeLayout
+        android:id="@+id/parent2_rl"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/parent2_child"
+            android:text="按钮3"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:background="#340000"
+            android:gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="48dp"/>
+    </RelativeLayout>
+<!--正确方式-->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+         <RelativeLayout
+             android:id="@+id/touch_view"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"/>
+
+       <TextView
+           android:id="@+id/child1_tv"
+           android:text="按钮1"
+           android:layout_centerInParent="true"
+           android:textColor="@color/white"
+           android:background="#340000"
+           android:gravity="center"
+           android:layout_width="120dp"
+           android:layout_height="48dp"/>
+
+       <TextView
+           android:id="@+id/child2_tv"
+           android:text="按钮2"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="20dp"
+           android:textColor="@color/white"
+           android:background="#340000"
+           android:gravity="center"
+           android:layout_width="120dp"
+           android:layout_height="48dp"/>
+
+   </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
